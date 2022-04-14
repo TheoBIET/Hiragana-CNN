@@ -1,4 +1,4 @@
-HIRAGANA={
+HIRAGANA = {
     ' A': 'あ',
     ' E': 'え',
     ' I': 'い',
