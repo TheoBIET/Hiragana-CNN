@@ -1,3 +1,6 @@
+HOST = '0.0.0.0'
+BASE_URL = '/api/v1'
+PORT=8080
 HIRAGANA = {
     ' A': 'あ',
     ' E': 'え',
