@@ -76,7 +76,7 @@ class PredictionHandler():
     def make_prediction(self):
         self.prediction_prob = self.model.predict(self.image_array.reshape(MODEL_SHAPE))
         prediction = self.prediction_prob * 100
-        return [(HIRA[i], prediction[0][i]) for i in range(len(HIRAGANA)) if prediction[0][i] > 0.5]
+        return [[HIRA[i], HIRAGANA[HIRA[i]], float(prediction[0][i])] for i in range(len(HIRAGANA)) if prediction[0][i] > 1]
 
     def __invert(self):
         return ImageOps.invert(self.image)

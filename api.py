@@ -51,6 +51,7 @@ def create_app():
             message={
                 'fr': f"La prédiction est : {prediction}",
             },
+            prediction=prediction,
             error=False,
         ), 200
 
