@@ -59,7 +59,7 @@ HIRA = [' A',
  ',,',
  ',0']
 
-model = load_model('hiragana_model.h5')
+model = load_model('./models/hiragana_model.h5')
 
 
 class PredictionHandler():
