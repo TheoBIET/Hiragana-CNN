@@ -3,10 +3,13 @@ import logging
 from os import getenv
 from flask import Flask, request, jsonify, redirect
 from flask_cors import CORS
+from dotenv import load_dotenv
 
-from utils.constants import HIRAGANA, BASE_URL, HOST, PORT
+from utils.constants import HIRAGANA, BASE_URL, HOST
 from classes.PredictionHandler import PredictionHandler
 
+load_dotenv()
+PORT = getenv('PORT')
 
 def create_app():
     logging.basicConfig(
